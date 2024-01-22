@@ -1,0 +1,172 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Python 3</h1>
+            <h2 id="introduccion">Introducción</h2>
+            <p></p>Estas frente a esta pantalla, delante de la oportunidad de tu vida,
+            la oportunidad de aprender a programar con Python, un lenguaje
+            sencillo, potente y moderno con el que podrás hacer miles de cosas
+            como juegos, aplicaciones para móvil y lo que te puedas imaginar,
+            de hecho Facebook, Twitter, YouTube, tiktok y cientos de aplicaciones
+            famosas usan este lenguaje. Ahora que te he metido ganas, vamos a
+            aprender algo ¿no?.</p>
+
+            <h2 id="Instalacion">Instalación</h2>
+            <b>Instalación en Linux</b>
+            <p>
+                En Linux la instalación resulta realmente sencilla. Si eres usuario de 
+                Ubuntu (Debian y derivados), basta con abrir la terminal y escribir lo siguiente:
+                <u>sudo apt-get install python3</u>
+                Si eres usuario de otra distribución no puedo guiarte desde aquí, ya que puede variar 
+                el gestor de paquetes y el nombre de la paquetería.
+            </p>
+            <b>Instalación en Windows</b>
+            <p>
+                
+            </p>
+
+            <h2 id="tema1">Tema1</h2>
+                <h3>Salida de información</h3>
+                    <h4>Texto</h4>
+                    <p>Todo programa hace una serie de acciones básicas. Una de estas acciones es la de
+                    mostrar información: texto, números, resultados... es algo imprescindible.
+                    Un programa se compone de pequeñas líneas de código, órdenes
+                    simples. En adelante llamaremos a estas órdenes funciones.
+                    Vamos a hacer nuestro primer programa. Este consistirá en mostrar un texto.
+                    Para mostrar texto en Python usamos la función print, cuya sintaxis es:
+                    print('texto')</p>
+                    <pre>
+                    Ejemplo en lenguaje humano:
+                    Orden: Dime “Me llamo Sergio y tengo 16 años”
+                    Respuesta: Me llamo Sergio y tengo 16 años
+                    Lenguaje Python:
+                    Orden: print('Me llamo Sergio y tengo 16 años')
+                    Respuesta: Me llamo Sergio y tengo 16 años
+                    </pre> 
+                    <h4>Números</h4>
+                    <p>¿Y si en lugar de texto quiero mostrar una operación?
+                    Es muy fácil, solo debes tener en cuenta una regla: cuando vas a mostrar texto, el
+                    interior de los paréntesis de print va con comillas simples:
+                    print('texto')
+                    Pero cuando quieres mostrar números u operaciones, va sin comillas:
+                    print(1 + 2)
+                    Se aprecia la diferencia, ¿verdad?. Ahora vamos a poner un ejemplo:</p>
+                    <pre>
+                    Ejemplo en lenguaje humano:
+                    Orden: Dime, ¿cuánto son 10 menos 2 y medio?
+                    Respuesta: Son 7 y medio.
+                    Lenguaje Python:
+                    Orden: print(10 – 2.5)
+                    Respuesta: 7.5
+                    </pre>
+                    Aquí solo hemos mostrado números pero, ¿podríamos mostrar texto y números al mismo tiempo en nuestro programa? La respuesta es que sí.
+                    <pre>
+                    Orden: print('10 por 3 son', 10 * 3) 
+                    Respuesta: 10 por 3 son 30
+                    </pre>
+                    <p>
+                    Para combinar texto con operaciones debes respetar la regla que mencioné antes: el texto lleva comillas, los números no. La frase '10 por 3 son' aunque contiene números, a estos se los considera texto y por eso llevan comillas. 10 * 3 es una operación; no es texto y por eso no lleva comillas.
+                    </p>
+                    Importante: el texto va separado de los números y operaciones por coma.
+                    <pre>
+                    Orden: print('Mi Windows tiene', 60 + 40, 'virus.') 
+                    Respuesta: Mi Windows tiene 100 virus.
+                    </pre>
+                    Pongo una coma a cada lado de la operación para separarlo de los dos textos.
+                    <h4>Operadores</h4>
+                    <p>
+                    Seguro que te habrás desconcertado un poco al ver que la multiplicación en Python se hace con asterisco (*) y no con equis (x). También te habrá sorprendido ver que en los números con parte fraccionaria no hay separación por coma, sino por punto; de tal manera que el número 6,30 en Python es 6.30.
+                    Te conviene conocer los tipos de número, así como las operaciones aritméticas que puedes hacer en este lenguaje (suma, resta, multiplicación...) y otras más potentes.
+                    </p>
+                    He aquí una tabla que muestra algunas de las operaciones básicas que pueden hacerse en Python:
+                    <table>
+                        <tr>
+                            <th>Operación</th><th>Operador</th><th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>Suma</td><td> +</td><td>2 + 4 = 6</td>
+                        </tr>
+                        <tr>
+                            <td>Resta</td><td> -</td><td>2 - 4 = -2</td>
+                        </tr>
+                        <tr>
+                            <td>Multiplicación</td><td> *</td><td>3 * 3 = 9</td>
+                        </tr>  
+                        <tr>
+                            <td>Potencia</td><td> **</td><td>3 ** 3 = 27</td>
+                        </tr>   
+                        <tr>
+                            <td>Division</td><td> /</td><td>50 / 6 = 8.3</td>
+                        </tr>              
+                        <tr>
+                            <td>Division entera</td><td> //</td><td>50 // 6 = 8</td>
+                        </tr>
+                        <tr>
+                            <td>Resto o módulo</td><td> %</td><td>50 % 6 = 2</td>
+                        </tr>
+                    </table>
+                <h3>Variables</h3>
+                <p>
+                    la definición técnica de una variable es, "una posición de memoria
+                    a la que le asignamos un nombre y un tipo de dato". Pero eso 
+                    suena muy complejo, aunque no lo es, y aquí estamos para aprender
+                    las cosas fáciles y sencillas.
+                    Imagina un cajón, le pones una etiqueta con un nombre, eso es una variable,
+                    un sitio en la memoria donde vas a guardar cosas y le pones un nombre
+                    para luego recuperalo cuando lo necesites. Normalmente, además de nombre se 
+                    le suele indicar el tipo de dato(número, carácter, palabra, etc...) pero
+                    en Python no es necesario, al menos no siempre. Veamos un par de ejemplos.:
+                </p>
+                <pre>
+                    con # ponemos un comentario que no se ejecuta
+
+                    ejemplo1
+
+                    #así creamos una variable
+                    nombre = "SpiderMan" 
+                    #así mostramos la variable por pantalla
+                    print("Tu nombre es " + nombre)
+
+                    ejemplo2
+
+                    #así alamacenamos en la variable nombre lo escrito por teclado
+                    nombre = input("¿como te llamas?: ")
+                    #así mostramos la variable por pantalla
+                    print("hola" + nombre)
+                </pre>
+                <h3>Ejercicios(resueltos)</h3>
+                <p>
+                    1.Muestre el texto "hola mundo"
+                    2.Pida al usuario su nombre y edad, y los Muestre
+                    3.Pida al usuario dos números enteros, los sume y muestre el resultado
+                </p>
+                <pre>
+                    Soluciones:
+
+
+                    1.
+                    print('Hola mundo') #muestra texto
+                    input('Pulse intro para finalizar...') #hago una pausa y termino 
+
+                    2.
+                    nombre = input('Introduce su nombre') #almacena el nombre
+                    #recoge el dato en formato cadena(palabra), con int lo transforma en número entero y lo alamacena
+                    edad = int(input('Introduzca su edad'))
+
+                    print('Te llamas ' + nombre + ' y tienes ' + edad + ' años')
+                    input('Pulse intro para finalizar...')
+
+                    3.
+                    num_1 = int(input('Introduzca el primer número'))
+                    num_2 = int(input('Introduzca el segundo número'))
+                    resultado = num_1 + num_2 #hago la operación y almaceno el resultado
+
+                    print('El resultado es ' + resultado)
+
+                    input('Pulse intro para finalizar...')
+                </pre>
+
+
+
+    </body>
+</html>

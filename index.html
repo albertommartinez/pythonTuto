@@ -1,0 +1,560 @@
+
+    <!doctype html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tutorial Python 3</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/lilCake.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        
+        <!-- Script -->
+        <script type="text/javascript" src="./js/Jmon.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
+        
+    </head>
+    
+    <body>
+      <div class="conten">
+      <header class="texto-centrado no-margen">
+      <h1>Tutorial Python 3</h1>
+      <img src="./img/logo.png" class="logo">
+      </header>
+      
+      <nav class="nav_horizontal fuenteNegro" id="navHorizontal">
+          <ul>
+              <li id="boton1" class="boton verde"><a src="#">opcion1</a></li>
+              <li id="boton2" class="boton rojo"><a src="#">opcion2</a></li>
+              <li id="boton3" class="boton"><a src="#">opcion3</a></li>
+          </ul>
+      </nav>
+      
+    <main class="grid col-4 med-col-2 peq-col-1">
+        <div  class="grid col-1" id="menu_izq">
+          <!--Indice-->
+          <ul>
+              <li><a href='index.html#introduccion'>Introducción</a></li>
+              <li><a href='index.html#instalacion'>Instalación</a></li>
+              <li><a href='index.html#como'>¿Cómo hago mi programa?</a></li>
+              <li><a href='index.html#tema1'> Tema1</a>
+                  <ul>
+                      <li><a href='index.html#salidaInfo'>Salida de informacion</a></li>
+                      <ul>
+                          <li><a href="index.html#texto">Texto</a></li>
+                          <li><a href="index.html#numeros">Números</a></li>
+                          <li><a href="index.html#opep">Operadores</a></li>
+                      </ul>
+                      <li><a href="index.html#varia">Variables</a></li>
+                      <li><a href="index.html#entradaInfo">Entrada de información</a></li>
+                      <li><a href="index.html#ejer">Ejercicios(resueltos)</a></li>
+                  </ul>
+              </li>
+              <li><a href='index.html#tema2'> Tema2</a>
+                  <ul>
+                        <li><a href='index.html#condicionales'>Condicionales</a></li>
+                        <li><a href='index.html#bucles'>Bucles</a></li>
+                            <ul>
+                                <li><a href='index.html#while'>bucle while</a></li>
+                                <li><a href='index.html#for'>bucle for</a></li>
+                            </ul>
+                        <li><a href='index.html#funciones'>Funciones</a></li>
+                      <li>Leccion3</li>
+
+                  </ul>
+              </li>
+              <li>Tema3
+                  <ul>
+                      <li>Leccion1</li>
+                      <li>Leccion2</li>
+                      <li>Leccion3</li>
+                  </ul>
+              </li>
+          </ul>
+        </div> 
+
+        <div class="grid span-3 med-span-2" id="central" > 
+          <!--Temario-->
+          <!--<div id="temario">-->
+            <h1>Python 3</h1>
+                <h2 id="introduccion">Introducción</h2>
+                <p>Estas frente a esta pantalla, delante de la oportunidad de tu vida,
+                la oportunidad de aprender a programar con Python, un lenguaje
+                sencillo, potente y moderno con el que podrás hacer miles de cosas
+                como juegos, aplicaciones para móvil y lo que te puedas imaginar,
+                de hecho Facebook, Twitter, YouTube, tiktok y cientos de aplicaciones
+                famosas usan este lenguaje. Ahora que te he metido ganas, vamos a
+                aprender algo ¿no?.
+                </p>
+
+                <h2 id="instalacion">Instalación</h2>
+                <b>Instalación en Linux</b>
+                <p>
+                En Linux la instalación resulta realmente sencilla. Si eres usuario de 
+                Ubuntu (Debian y derivados), basta con abrir la terminal y escribir lo siguiente:
+                <p><u>sudo apt-get install python3</u></p>
+                Si eres usuario de otra distribución no puedo guiarte desde aquí, ya que puede variar 
+                el gestor de paquetes y el nombre de la paquetería.
+                </p>
+                <b>Instalación en Windows</b>
+                <p>
+                Por suerte (o por desgracia) todo el mundo dispone de una copia de Windows en casa, incluso yo; así que en esta instalación si os puedo guiar. 
+                Python no viene preinstalado en Windows, por lo que obligatoriamente deberás descargar este paquete: 
+                <p><a href="http://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe">http://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe </a> </p>
+                La instalación en Windows no tiene mayor complicación: basta con hacer clic en “Siguiente” repetidas veces hasta finalizar, teniendo en cuenta que hay que marcar
+                la casilla para añadir python al PATH.
+                Y con esto ya tenemos instalado Python en nuestro ordenador.
+                </p>
+
+                <h2 id="como">¿Cómo hago mi programa?</h2>
+                <p>
+                Un programa está compuesto por códigos, órdenes simples que las personas podemos comprender. Por ejemplo:
+                <pre>
+                - Lenguaje humano:
+                Orden: Dime, ¿cuánto son 2+2? 
+                Respuesta: Son 4.
+                - Lenguaje Python:
+                Orden: print(2+2) 
+                Respuesta: 4
+                </pre>
+                Fácil, ¿verdad?.
+               </p>
+                Para escribir dichos códigos nosotros usaremos un editor de texto. ¿Conoces el bloc de notas de Windows? pues ese sería un ejemplo.
+                Pero el bloc de notas es muy malo, así que nosotros vamos a usar otro editor mejor.
+                    <h3 id="editoresLinux">Editores para Linux</h3>
+                    <p>
+                        En Linux tenemos magníficos editores como Gedit (GNOME) y Kate (KDE). Si eres un enamorado de la terminal también puedes usar Pico.
+                        Asumo que los usuarios de Linux saben encontrar estos programas en su sistema o, en caso de no tenerlos, saben instalarlos.
+                    </p>
+                    <h3 id="editoresWin">Editores para Windows</h3>
+                    <p>
+                        Para Windows hay gran variedad, pero a mi parecer, hay uno que combina la sencillez con la potencia
+                    </p>
+                        Notepad++:<a href="http://download.tuxfamily.org/notepadplus/6.1.5/npp.6.1.5.Installer.exe">Descargar</a>
+                    <p>
+                        Si no te convence, hay multitud de ellos por internet.
+                        Con esto ya tenemos lo necesario para empezar a aprender.
+                    </p>
+
+
+                <h2 id="tema1">Tema1</h2>
+                    <h3 id="salidaInfo">Salida de información</h3>
+                        <h4 id="texto">Texto</h4>
+                        <p>Todo programa hace una serie de acciones básicas. Una de estas acciones es la de
+                        mostrar información: texto, números, resultados... es algo imprescindible.
+                        Un programa se compone de pequeñas líneas de código, órdenes
+                        simples. En adelante llamaremos a estas órdenes funciones.
+                        Vamos a hacer nuestro primer programa. Este consistirá en mostrar un texto.
+                        Para mostrar texto en Python usamos la función print, cuya sintaxis es:
+                        print('texto')
+                        </p>
+                        <pre>
+                        Ejemplo en lenguaje humano:
+                        Orden: Dime “Me llamo Sergio y tengo 16 años”
+                        Respuesta: Me llamo Sergio y tengo 16 años
+                        Lenguaje Python:
+                        Orden: print('Me llamo Sergio y tengo 16 años')
+                        Respuesta: Me llamo Sergio y tengo 16 años
+                        </pre> 
+                        <h4 id="numeros">Números</h4>
+                        <p>¿Y si en lugar de texto quiero mostrar una operación?
+                        Es muy fácil, solo debes tener en cuenta una regla: cuando vas a mostrar texto, el
+                        interior de los paréntesis de print va con comillas simples:
+                        print('texto')
+                        Pero cuando quieres mostrar números u operaciones, va sin comillas:
+                        print(1 + 2)
+                        Se aprecia la diferencia, ¿verdad?. Ahora vamos a poner un ejemplo:
+                        </p>
+                        <pre>
+                        Ejemplo en lenguaje humano:
+                        Orden: Dime, ¿cuánto son 10 menos 2 y medio?
+                        Respuesta: Son 7 y medio.
+                        Lenguaje Python:
+                        Orden: print(10 – 2.5)
+                        Respuesta: 7.5
+                        </pre>
+                        <p>
+                        Aquí solo hemos mostrado números pero, ¿podríamos mostrar texto y números al mismo tiempo en nuestro programa? La respuesta es que sí.
+                        </p>
+                        <pre>
+                        Orden: print('10 por 3 son', 10 * 3) 
+                        Respuesta: 10 por 3 son 30
+                        </pre>
+                        <p>
+                        Para combinar texto con operaciones debes respetar la regla que mencioné antes: el texto lleva comillas, los números no. La frase '10 por 3 son' aunque contiene números, a estos se los considera texto y por eso llevan comillas. 10 * 3 es una operación; no es texto y por eso no lleva comillas.
+                        Importante: el texto va separado de los números y operaciones por coma.
+                        Pongo una coma a cada lado de la operación para separarlo de los dos textos.
+                        </p>
+                        <h4 id="opep">Operadores</h4>
+                        <p>
+                        Seguro que te habrás desconcertado un poco al ver que la multiplicación en Python se hace con asterisco (*) y no con equis (x). También te habrá sorprendido ver que en los números con parte fraccionaria no hay separación por coma, sino por punto; de tal manera que el número 6,30 en Python es 6.30.
+                        Te conviene conocer los tipos de número, así como las operaciones aritméticas que puedes hacer en este lenguaje (suma, resta, multiplicación...) y otras más potentes.
+                        He aquí una tabla que muestra algunas de las operaciones básicas que pueden hacerse en Python:
+                        </p>
+                        <table>
+                            <tr>
+                                <th>Operación</th><th>Operador</th><th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td>Suma</td><td> +</td><td>2 + 4 = 6</td>
+                            </tr>
+                            <tr>
+                                <td>Resta</td><td> -</td><td>2 - 4 = -2</td>
+                            </tr>
+                            <tr>
+                                <td>Multiplicación</td><td> *</td><td>3 * 3 = 9</td>
+                            </tr>  
+                            <tr>
+                                <td>Potencia</td><td> **</td><td>3 ** 3 = 27</td>
+                            </tr>   
+                            <tr>
+                                <td>Division</td><td> /</td><td>50 / 6 = 8.3</td>
+                            </tr>              
+                            <tr>
+                                <td>Division entera</td><td> //</td><td>50 // 6 = 8</td>
+                            </tr>
+                            <tr>
+                                <td>Resto o módulo</td><td> %</td><td>50 % 6 = 2</td>
+                            </tr>
+                        </table>
+                    <h3 id="varia">Variables</h3>
+                    <p>
+                        la definición técnica de una variable es, "una posición de memoria
+                        a la que le asignamos un nombre y un tipo de dato". Pero eso 
+                        suena muy complejo, aunque no lo es, y aquí estamos para aprender
+                        las cosas fáciles y sencillas.
+                        Imagina un cajón, le pones una etiqueta con un nombre, eso es una variable,
+                        un sitio en la memoria donde vas a guardar cosas y le pones un nombre
+                        para luego recuperalo cuando lo necesites. Normalmente, además de nombre se 
+                        le suele indicar el tipo de dato(número, carácter, palabra, etc...) pero
+                        en Python no es necesario, al menos no siempre. Veamos un par de ejemplos.:
+                    </p>
+                    <pre>
+                        con # ponemos un comentario que no se ejecuta
+
+                        ejemplo1
+
+                        #así creamos una variable
+                        nombre = "SpiderMan" 
+                        #así mostramos la variable por pantalla
+                        print("Tu nombre es " + nombre)
+
+                        ejemplo2
+
+                        #así alamacenamos en la variable nombre lo escrito por teclado
+                        nombre = input("¿como te llamas?: ")
+                        #así mostramos la variable por pantalla
+                        print("hola" + nombre)
+                    </pre>
+
+                    <h3 id="entradaInfo">Entrada de información</h3>
+                    <p>
+                        Otra acción imprescindible que realiza un programa es la de tomar información. Esto le permite interactuar con el usuario, adaptándose a las necesidades de éste. Si un programa no toma información los resultados siempre serán los mismos, por lo que resultará de poca utilidad.  
+                    </p>
+                        <h4>La función input()</h4>
+                        <p>
+                            Ya habrás visto esta función en ejemplos de código anteriores. Nosotros la usaremos para dos cosas, hacer pausas en nuestro programa y permitir que el usuario introduzca información.
+                            Veamos un ejemplo de pausa:
+                        </p>
+                            input()
+                        <p>
+                            Aquí el programa se quedaría esperando hasta que el usuario pulse INTRO.
+                            También podemos hacer que se muestre un mensaje junto con la función. Ejemplo:
+                        </p>
+                            input('Pulsa INTRO para continuar...')
+                        <p>
+                            El programa mostraría lo siguiente:
+                        </p>
+                            Pulsa INTRO para continuar...
+                        <p>
+                            Tras pulsar INTRO el programa continuaría con su ejecución o, en caso de ser input() la última línea de código, el programa finalizaría de forma normal.
+                            Ahora que ya sabemos cómo hacer pausas con esta función, vamos a aprender a pedirle información al usuario y guardarla en variables. Para ello conoceremos algunos tipos de datos, los cuales se muestran en la siguiente tabla:
+                        </p>
+                        <table>
+                            <tr><th>Tipo</th><th>Clase</th><th>Ejemplo</th></tr>
+                            <tr><td>str</td><td>Texto</td><td>'esto es texto'</td></tr>
+                            <tr><td>int</td><td>Número entero</td><td>23</td></tr>
+                            <tr><td>float</td><td>Número real</td><td>3.14</td></tr>
+                        </table>
+
+                        <p>La información de la tabla anterior puede parecer algo confusa al principio, pero ahora te lo explicaré detalladamente para que lo entiendas:</p>
+                        <pre>
+                        nombre = str (input('Introduce tu nombre')) 
+                        print('Te llamas', nombre)
+                        </pre>
+                        <p>Usamos str cuando queremos que el usuario introduzca cualquier tipo de texto como palabras, frases, etc. Cabe destacar que también podemos operar con texto (sumarlo, restarlo, multiplicarlo...), por increíble que te pueda parecer. Ejemplo:</p>
+                        <pre>
+                            # Este programa se inventa palabras compuestas:
+                            palabra_1 = str (input('Introduce la primera palabra')) 
+                            palabra_2 = str (input('Introduce la segunda palabra'))
+
+                            compuesta = palabra_1 + palabra_2 # Hago la unión de ambos textos.
+
+                            print('Me he inventado esta palabra:', compuesta)
+                        </pre>
+                        <p>El tipo int se utiliza cuando queremos que el usuario introduzca números enteros. Este tipo tambíen es válido para números muy grandes. Ejemplo:</p>
+                        <pre>
+                        edad = int (input('Introduce tu edad')) 
+                        print('Tienes', edad, 'años.')
+
+                        Otro ejemplo:
+
+                        dist_pluto = int (input('¿A cuántos kilómetros está Plutón de la Tierra?')) 
+                        print('Está a', dist_pluto, 'kilómetros.')
+                        </pre>
+                        <p>Usaremos el tipo float para que el usuario introduzca números reales. Ejemplo:</p>
+                        <pre>
+                        pi = float (input('¿Cuál es el número PI?')) # Ya sabemos que es 3.14 
+                        print('El número PI es', pi)
+                        </pre>
+                        <p>Y con esto tenemos lo necesario para crear una interacción básica con el usuario.</p>
+
+
+                    <h3 id="ejer">Ejercicios(resueltos)</h3>
+                    <pre>
+                        _____________________________________________________________________________________________________
+                        1.Muestre el texto "hola mundo"
+                        solución:
+
+                        print('Hola mundo') #muestra texto
+                        input('Pulse intro para finalizar...') #hago una pausa y termino 
+                        _____________________________________________________________________________________________________
+                        2.Pida al usuario su nombre y edad, y los Muestre:
+                        solución:
+
+                        nombre = input('Introduce su nombre') #almacena el nombre
+                        #recoge el dato en formato cadena(palabra), con int lo transforma en número entero y lo alamacena
+                        edad = int(input('Introduzca su edad'))
+
+                        print('Te llamas ' + nombre + ' y tienes ' + edad + ' años')
+                        input('Pulse intro para finalizar...')
+                        ____________________________________________________________________________________________________
+                        3.Pida al usuario dos números enteros, los sume y muestre el resultado
+                        solución:
+
+                        num_1 = int(input('Introduzca el primer número'))
+                        num_2 = int(input('Introduzca el segundo número'))
+                        resultado = num_1 + num_2 #hago la operación y almaceno el resultado
+
+                        print('El resultado es ' + resultado)
+
+                        input('Pulse intro para finalizar...')
+                        ____________________________________________________________________________________________________
+                    </pre>
+                
+                <h2 id="tema2">Tema2: flujo de datos</h2>
+                    <h3 id="condicionales">Condicionales</h3>
+                    <p>
+                    Las condiciones dotan de inteligencia a nuestros programas. Usando una condición puedes plantear una igualdad que, si se cumple, conlleva a una determinada acción.
+                    Para comprobar una igualdad usamos los siguientes operadores relacionales:
+                    </p>
+                    <table>
+                        <tr><th>Operación</th><th>Operador</th><th>Ejemplo</th><th>Descripción</th></tr>
+                        <tr><td>Igual</td><td>==</td><td>a == b</td><td>Comprueba si a y b son iguales</td></tr>
+                        <tr><td>Desigual</td><td>!=</td><td>a != b</td><td>Comprueba si a y b son distintos</td></tr>
+                        <tr><td>Mayor que</td><td>></td><td>a > b</td><td>Comprueba si a es mayor que b</td></tr>
+                        <tr><td>Menor que</td><td><</td><td>a < b</td><td>Comprueba si a menor que b</td></tr>
+                        <tr><td>Mayor o igual a</td><td>>=</td><td>a >= b</td><td>Comprueba si a es mayor o igual que b</td></tr>
+                        <tr><td>Menor o igual a</td><td><=</td><td>a <= b</td><td>Comprueba si a es menor o igual que b</td></tr>
+                    </table>
+                    A continuación se explicará cómo usar condiciones.
+                        <h4 id="if">if/else</h4>
+                        <p>
+                            Bien, if y else son dos funciones que pueden funcionar en conjunto o de manera independiente para crear condiciones. Pongamos un ejemplo con if:    
+                        </p>
+                        <pre>
+                            nombre = str (input('¿Cómo te llamas?')) # Pido al usuario su nombre.
+                            # Establezco una condición: si el usuario se llama Cristian, le saludo. 
+                            if nombre == 'Cristian':   
+                                print('Hola', nombre)
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <p>
+                            He establecido que, si el usuario se llama Cristian, el programa le saludará. En caso de no cumplirse esto, el programa terminaría sin mostrar nada.
+                            Ahora atento, pues lo que voy a decir es muy importante, para que una serie de acciones estén sujetas a una condición deberás indentarlas con 4 espacios, nunca con tabulador. Todo lo que no esté sujeto a una condición va sin indentado.
+                            Como ya dije antes, puedes usar if de forma independiente. En cambio, para usar else siempre debe haber antes de éste un if.
+                            El efecto de else es que si no se cumple la condición de if, entonces el bloque de acciones de else se ejecuta. Pongamos otro ejemplo para verlo con más claridad:
+                        </p>
+                        <pre>
+                            # Le pido al usuario que introduzca su nombre. 
+                            nombre = str (input('¿Cómo te llamas?'))
+
+                            # Compruebo si el usuario se llama Laura. 
+                            # Siempre que se cumpla el if, el else nunca se ejecutará. 
+                            if nombre == 'Laura':
+                                print('Hola', nombre)
+                            # Si no se cumple la condición de if, entonces sí se ejecuta el else. 
+                            else:
+                                print('No te conozco.')
+                            # El input está afuera de ambas condiciones, así que siempre se ejecutará. 
+                            # Para dejar afuera un bloque, éste debe estar sin indentar. 
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <p>
+                            Cabe destacar que después de cada llamada a if y else van dos puntos (:).
+                            Ahora supongamos que queremos comprobar varias condiciones, ¿podríamos poner varios if uno detrás de otro? la respuesta es que sí. Ejemplo:
+                        </p>
+                        <pre>
+                            # Este programa comprueba si cumplimos los requisitos de Ubuntu 12.04. 
+                            # Pido información sobre el procesador: 
+                            procesador = float (input('¿Cuántos megaherzios tiene su procesador?')) 
+                            # Pido información sobre la RAM: 
+                            ram = int (input('¿Cuánta memoria RAM tiene su ordenador?'))
+
+                            if procesador >= 1000: # Compruebo la potencia del procesador.
+                                print('Tu procesador cumple los requisitos.') 
+                            else:
+                                print('Tu procesador no cumple los requisitos.')
+                            if ram >= 1024: # Compruebo la cantidad de RAM.
+                                print('Tienes suficiente memoria RAM.')
+                            else:
+                                print('No tienes suficiente memoria RAM.')
+
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <h4 id="elif"></h4>
+                        <p>
+                            Hay otro método para hacer varias comprobaciones, aunque el efecto es distinto. Si queremos hacer varias comprobaciones y que varios bloques de acciones se ejecuten, entonces usaremos varios if; pero si queremos hacer varias comprobaciones y que sólo se ejecute un bloque de acciones, usaremos elif.
+                        </p>
+                        <pre>
+                            # Este programa comprueba si un número es positivo o negativo: 
+                            num = int (input('Introduzca un número')) # Pido un número al usuario.
+
+                            if num < 0:
+                                print(num, 'es un número negativo.')
+                            elif num > 0:
+                                print(num, 'es un número positivo.')
+                            elif num == 0:
+                                print(num, 'no pertenece a ningún grupo.')
+
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <p>
+                            También podemos añadir un else después del útimo elif para contemplar otros posibles sucesos. Ejemplo:    
+                        </p>
+                        <pre>
+                            nombre = str (input('¿Cómo se llama usted?')) # Pido su nombre al usuario.
+                            # El programa comprobará si te llamas Alberto o Regina. 
+                            # De cumplirse te saludará, pero si tienes otro nombre dirá que no te conoce. 
+                            if nombre == 'Alberto':
+                                print('Hola', nombre)
+                            elif nombre == 'Regina'
+                                print('Hola', nombre)
+                            else:
+                                print('No te conozco.')
+
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.  
+                        </pre>
+                        <h3 id="bucles">Bucles</h3>
+                        <p>
+                            El bucle es otro tipo de condición. Con él también podemos plantear una igualdad, con la diferencia de que mientras ésta se cumpla, el bloque de acciones dentro del bucle se irá repitiendo una y otra vez. El bucle sólo finalizará cuando la igualdad deje de cumplirse.
+                            <h4 id="while">Bucle while</h4>
+                            
+                                El bucle while se puede utilizar cuando desconocemos el número de veces que se repetirá un bloque y para el manejo de excepciones, entre otras cosas.
+                                Veamos un ejemplo de repetición de un bloque:
+                        </p>
+                        <pre>
+                            # Este programa nos servirá para comprar un número dado de cómics: 
+                            comics_usuario = 0 # Número de cómics que tiene actualmente el usuario. 
+                            # Le pregunto al usuario cuántos cómics le gustaría tener. 
+                            num_comics = int (input('¿Cuántos cómics te gustaría tener?'))
+
+                            # Mientras tengas menos cómics de los que te gustaría tener... 
+                            while comics_usuario < num_comics:
+                                print('Tienes', comics_usuario, 'comics.')    
+                                print('Has comprado un cómic nuevo.')    
+                                comics_usuario += 1    
+                                input('Pulse INTRO para continuar...') # Hago una pausa.
+
+                            input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <p>
+                            El manejo de excepciones sirve para impedir que ocurran imprevistos en la ejecución de un programa. Por ejemplo, cuando quiero que el usuario introduzca sólo números mayores que cero.    
+                        </p>
+                        <pre>
+                            # Le pregunto al usuario cuántos cómics le gustaría tener. 
+                            num_comics = int (input('¿Cuántos cómics te gustaría tener?'))
+
+                            while num_comics <= 0: # Manejo de excepciones.
+                                print('Debes introducir un número mayor que cero.') # Advertencia.
+                                # Hago que el usuario introduzca otro número.    
+                                # Si sigue siendo menor o igual a cero, el bloque volverá a repetirse.    
+                                num_comics = int (input('¿Cuántos cómics te gustaría tener?')) 1234
+
+                                input('Pulse INTRO para finalizar...') # Hago una pausa.
+                        </pre>
+                        <h4 id="for">Bucle for</h4>
+                        <p>
+                            El for es un tipo de bucle, parecido al while pero con ciertas diferencias. La principal es que el número de iteraciones de un for esta definido de antemano, mientras que en un while no. La diferencia principal con respecto al while es en la condición. Mientras que en el while la condición era evaluada en cada iteración para decidir si volver a ejecutar o no el código, en el for no existe tal condición, sino un iterable que define las veces que se ejecutará el código. En el siguiente ejemplo vemos un bucle for que se ejecuta 5 veces, y donde la i incrementa su valor “automáticamente” en 1 en cada iteración.
+                        </p>
+                        <pre>
+                            for i in range(0, 5):
+                                print(i)
+
+                            # Salida:
+                            # 0
+                            # 1
+                            # 2
+                            # 3
+                            # 4    
+                        </pre>
+                        <p>
+                            Si has leído el capítulo del while, tal vez ya empieces a ver ventajas en el uso del for. Si por ejemplo, queremos tener un número que va creciendo de 0 a n, hacerlo con for nos ahorra alguna línea de código, porque no tenemos que escribir código para incrementar el número.
+                            Si observas, el ejemplo lo que estas iterando es la función range(0, 5), la cual con los valores que se le estan pasando (0 y 5) de vuelve el rango de valores de 0 a 5, pero solo uno, que va incrementando en cada iteración.
+                            En Python se puede iterar prácticamente todo, como por ejemplo una cadena. En el siguiente ejemplo vemos como la i va tomando los valores de cada letra. Mas adelante explicaremos que es esto de los iterables e iteradores.    
+                        </p>
+                        <pre> 
+                            for i in "unaCosa":
+                                print(i)
+
+                            # Salida:
+                            # u 
+                            # n 
+                            # a 
+                            # C 
+                            # o 
+                            # s 
+                            # a 
+                        </pre>
+                    
+                        <h3 id="funciones">Funciones</h3>
+                        <p>
+                            Una función es un trozo de código, declarado en cierta parte del programa, la cual podemos ejecutar las veces que queramos, para no reecribir código, se ejecutan simplemente llamandolas y se le pueden enviar valores, llamados parámetros para usarlos en distintos contextos, veamos un ejemplo.    
+                        </p>
+                        <pre>
+                            _____________________________________________________________________________________________________
+                            #suma dos números sin parámetros
+                            def sumarNumeros():
+                                suma = 5 + 3
+                                return suma
+
+                            #ejecutar función
+                            resultado = sumarNumeros()
+                            _____________________________________________________________________________________________________
+                            #suma dos números con parámetros
+                            def sumarNumeros(numero1, numero2):
+                                suma = numero1 + numero2
+                                return suma
+
+                            #ejecutar función
+                            resultado = sumarNumeros(5, 3)
+                            _____________________________________________________________________________________________________
+                        </pre>
+                        <p>
+                            estos dos ejemplos hacen exactamente lo mismo, a diferencia de que en el segundo ejemplo si al llamarla ponemos otros números, de igual forma funcionará, en el primer ejemplo  si le pasas algún parámetro, dará error
+                        </p>
+                </div>
+                
+                
+        </div>
+
+        
+        
+      </main>
+    <footer>
+        ..:: Plataforma I2thor ::.. creado con el framework lil'cake por Alberto M. Martínez - albertommj@gmail.com -
+    </footer>
+    <!--</div>-->
+  </body>
+</html>
+    
